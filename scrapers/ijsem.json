@@ -2,7 +2,7 @@
   "url": "ijs\\.sgmjournals\\.org",
   "followables": {
     "fulltext_expansion": {
-      "selector": "//li[@id='articlefulltext']/a",
+      "selector": "//li/a[@id='Fulltext']",
       "attribute": "href"
     },
     "figure_expansion": {
@@ -96,23 +96,43 @@
     },
     "introduction_text": {
       "follow": "fulltext_expansion",
-      "selector": "//div[@class='articleSection' and [div/div/div/a[contains(@name, 'introduction')]]",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='introduction-1']]//*",
       "attribute": "text"
     },
-    "introduction_text": {
+      "methods_text": {
       "follow": "fulltext_expansion",
-      "selector": "//div[@class='articleSection' and [div/div/div/a[contains(@name, 'methods')]]",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='methods-1']]//*",
       "attribute": "text"
     },
-    "introduction_text": {
+    "results_text": {
       "follow": "fulltext_expansion",
-      "selector": "//div[@class='articleSection' and [div/div/div/a[contains(@name, 'resultsanddiscussion')]]",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='resultsanddiscussion-1']]//*",
       "attribute": "text"
     },
-    "introduction_text": {
+    "acknowledgements_text": {
       "follow": "fulltext_expansion",
-      "selector": "//div[@class='articleSection' and [div/div/div/a[contains(@name, 'acknowledgement')]]",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='acknowledgement-1']]//*",
       "attribute": "text"
+    },
+    "introduction_html": {
+      "follow": "fulltext_expansion",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='introduction-1']]//*",
+      "attribute": "html"
+    },
+      "methods_html": {
+      "follow": "fulltext_expansion",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='methods-1']]//*",
+      "attribute": "html"
+    },
+    "results_html": {
+      "follow": "fulltext_expansion",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='resultsanddiscussion-1']]//*",
+      "attribute": "html"
+    },
+    "acknowledgements_html": {
+      "follow": "fulltext_expansion",
+      "selector": "//div[@class='articleSection' and div[@class='articleSection']/div/div/a[@name='acknowledgement-1']]//*",
+      "attribute": "html"
     },
     "license": {
       "selector": "//li//a[contains(@href, 'license')]",
